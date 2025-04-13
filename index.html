@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strana Chudes</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="container">
+        <div class="logo">
+            <a href="javascript:void(0)" class="logo-link" id="logo">
+                <span class="logo-top">Страна</span>
+                <span class="logo-bottom">Чудес</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#about-us">О нас</a></li>
+                <li><a href="#services" class="nav-link">Услуги</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Ответы на вопросы</a></li>
+                <li><a href="#">Где мы находимся</a></li>
+            </ul>
+        </nav>
+        <button class="btn">Записаться</button>
+    </header>
+
+    <section class="hero">
+        <div class="hero--image">
+            <img src="img/mainimg.svg" alt="Фоновое изображение">
+            <div class="hero--info">
+                <h1>Добро пожаловать в "Страну чудес"!</h1>
+                <p>Каждый день у нас — это настоящее приключение! Мы помогаем детям раскрывать их таланты, учиться с радостью и находить новых друзей. Наши занятия — это игры, обучение, развитие — и никакой скуки!</p>
+                <p>Присоединяйтесь к нам и увидьте, как ваш ребёнок растёт и развивает свои способности с удовольствием!</p>
+
+                <div class="hero--button">
+                    <button class="btn">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us" class="about-us">
+        <h2 class="section-title">Наши достижения</h2>
+        <div class="info-blocks">
+            <div class="info-item">
+                <p>У нас</p>
+                <div class="circle" data-count="10">10+</div>
+                <p>направлений</p>
+            </div>
+            <div class="info-item">
+                <p>Мы работаем</p>
+                <div class="circle" data-count="3">3+</div>
+                <p>года</p>
+            </div>
+            <div class="info-item">
+                <p>Обучили</p>
+                <div class="circle" data-count="500">500+</div>
+                <p>учеников</p>
+            </div>
+        </div>
+
+        <div class="additional-info">
+            <p>Особенности:</p>
+            <ul>
+                <li><span class="checkmark">✔</span> Индивидуальная программа</li>
+                <li><span class="checkmark">✔</span> Собственный подход</li>
+                <li><span class="checkmark">✔</span> Грамотные и любящие учителя</li>
+                <li><span class="checkmark">✔</span> Множество идей</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="our-days">
+        <h2 class="section-title">НАШИ БУДНИ</h2>
+        <div class="gallery">
+            <img src="img/Photo1.png" alt="Фото 1" class="photo">
+            <img src="img/Photo2.png" alt="Фото 2" class="photo">
+            <img src="img/Photo3.png" alt="Фото 3" class="photo">
+            <img src="img/Photo4.png" alt="Фото 4" class="photo">
+            <img src="img/Photo5.png" alt="Фото 5" class="photo">
+            <img src="img/Photo6.png" alt="Фото 6" class="photo">
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Наши услуги</h2>
+        <div class="service-cards">
+          <div class="service-card">
+            <div class="image-wrapper">
+              <img src="img/Продленка.jpg" alt="Продленка">
+              <button class="btn">Записаться</button>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="image-wrapper">
+              <img src="img/Репетиторство.jpg" alt="Репетиторство">
+              <button class="btn">Записаться</button>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="image-wrapper">
+              <img src="img/Подготовка к школе.jpg" alt="Подготовка к школе">
+              <button class="btn">Записаться</button>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="image-wrapper">
+              <img src="img/Шахматы.jpg" alt="Шахматы">
+              <button class="btn">Записаться</button>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="image-wrapper">
+              <img src="img/Лепка.jpg" alt="Лепка">
+              <button class="btn">Записаться</button>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="image-wrapper">
+              <img src="img/Рисование.jpg" alt="Рисование">
+              <button class="btn">Записаться</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="modal-overlay" id="modal">
+        <div class="modal">
+          <span class="close-btn" id="closeModal">&times;</span>
+          <h3>Записаться</h3>
+          <form class="modal-form">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Телефон" required>
+            <input type="email" placeholder="Email">
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+
+<!-- Подключение Swiper.js (CDN) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Блок отзывов -->
+<section style="background-color: #fff59d; padding: 50px 0;">
+  <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 32px; margin-bottom: 30px;">Что говорят родители</h2>
+
+    <!-- Слайдер -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Один слайд -->
+        <div class="swiper-slide">
+          <div class="review-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p>Отличный центр развития, подготовка к школе хорошая, Марина Владимировна очень открытый и отзывчивый человек, с первого занятия нашла общий с дочкой, нам понравилось заниматься здесь 👍 всем рекомендую центр🙏</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС" style="height: 30px; margin-top: 20px; align-self: flex-end;">
+          </div>
+        </div>
+
+        <!-- Повтори слайд ещё 5 раз с разными текстами -->
+        <div class="swiper-slide">
+          <div class="review-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;"> 
+            <p>Хороший центр, ребёнку все нравилось, приходил домой довольный. Большое спасибо педагогам за прекрасную работу!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС">
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p>Спасибо за летний лагерь! Моя дочь (7 лет) ходила 2 недели и осталась очень довольна, были и прогулки, активности, уделяли время занятиям на каникулы, рисование, шахматы, кулинария. Были дополнительно организованы выезды (гончарная мастерская, кино). Все понравилось.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС">
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p>Водила ребёнка на дополнительные занятия (подтянуть математику и русский). Мне все очень понравилось, хороший преподавательский состав, который сразу нашёл нужный подход к ребёнку. Особенно благодарим преподавательницу Светлану Викторовну. Всё супер, придём в сентябре ещё!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС">
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p>Очень хороший центр. Сын ходит на подготовку к школе с большим удовольствием. Все нравится! Марина прекрасный педагог. Всегда может найти к детям подход и заинтересовать их!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС">
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card"style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
+            <p>Доброго времени суток! Нам очень нравится этот центр, и наш Педагог Марина! Самое главное — наша доча довольна занятиями! Подход к детям профессиональный, располагает к себе с первого раза, а ходим мы довольно длительное время!</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Стрелки -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Пагинация -->
+      <div class="swiper-pagination" style="margin-top: 30px;"></div>
+    </div>
+
+    <!-- Кнопка "Все отзывы" -->
+    <a href="https://2gis.ru" target="_blank" style="display: inline-block; margin-top: 40px; padding: 12px 24px; background-color: #43a047; color: white; border-radius: 10px; text-decoration: none;">Все отзывы</a>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <h2>Часто задаваемые вопросы</h2>
+  <p>Мы собрали для вас самые важные вопросы. Если остались дополнительные — смело пишите!</p>
+
+  <div class="faq-items">
+    <details class="faq-item">
+      <summary class="faq-question">Как проходит пробное занятие?</summary>
+      <div class="faq-answer">Пробное занятие длится 1 час (в случае с продлёнкой — день). Ребёнок знакомится с программой и педагогами. После занятия можно задать любые вопросы.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-question">Какая стоимость пробного занятия?</summary>
+      <div class="faq-answer">Пробное занятие проводится абсолютно бесплатно.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-question">Какая стоимость обучения?</summary>
+      <div class="faq-answer">Стоимость зависит от количества занятий и формата. Продлёнка — от 2500 тг в день. Уточняйте по телефону: +7-777-211-31-50.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-question">Возможно ли обучение в индивидуальном формате?</summary>
+      <div class="faq-answer">Да, доступны групповые и индивидуальные занятия в зависимости от потребностей.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-question">Какие материалы входят в стоимость обучения?</summary>
+      <div class="faq-answer">Все необходимые раздаточные материалы включены в стоимость.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-question">Как записаться на пробное занятие?</summary>
+      <div class="faq-answer">Оставьте заявку на сайте или позвоните по номеру: 8-777-211-31-50.</div>
+    </details>
+  </div>
+</section>
+<!-- Alpine.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+<section class="contact-section" id="contact">
+  <div class="contact-info">
+    <h2>Контакты</h2>
+    <p><strong>Телефон:</strong> <a href="tel:+77772113150">+7-777-211-31-50</a></p>
+    <p><strong>Адрес:</strong> г. Алматы, улица Примерная, 123 (можно заменить на свой)</p>
+  </div>
+
+  <div class="map-container">
+    <iframe src="https://widgets.2gis.com/widget?type=firm&regionId=1&firmId=1234567890123456" 
+      width="100%" 
+      height="400" 
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+    <script src="script.js"></script> <!-- Подключение JS -->
+
+</body>
+
+
+</html>
