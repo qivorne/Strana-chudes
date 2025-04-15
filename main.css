@@ -18,7 +18,7 @@
 body {
     font-family: "Negrita pro", sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f8ecc5;
     color: #333333;
     padding-top: 70px;
 }
@@ -46,6 +46,7 @@ header {
     left: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
 }
 
 header .logo {
@@ -87,7 +88,6 @@ header nav {
 
 }
 
-
 header nav ul {
     list-style-type: none;
     display: flex;
@@ -101,13 +101,17 @@ header nav ul li a {
     text-decoration: none;
     color: #333333;
     font-size: 18px;
-    padding: 5px 10px;
+    padding: 8px 14px;
+    border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 header nav ul li.active a {
-    background-color: #ffcc00;
+    background-color: #ffc107;
     border-radius: 5px;
+    color: #1C6A4C;
+    font-weight: 400;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 header nav ul li a:hover {
@@ -373,19 +377,24 @@ a {
 .service-card {
   position: relative;
   width: 400px; /* Максимальная ширина */
-  height: 400px;
+  height: 420px;
 }
 
 .image-wrapper {
   position: relative;
   overflow: hidden;
-  border-radius: 50px;
+  border-radius: 45px 45px 0 0;
+  height: 100%;
+  background-color: #FF914D;
+  border-radius: 45px 45px 45px 45px;
 }
 
 .image-wrapper img {
   width: 100%;
-  display: block;
-  border-radius: 16px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* Сдвигаем фокус наверх */
+  transform: translateY(-5%); /* Сдвигаем изображение вверх (на 20%) */
 }
 
 .image-wrapper .btn {
@@ -394,7 +403,7 @@ a {
   font-weight: 500;
   text-transform: none;
   letter-spacing: 0.5px;
-  bottom: 15px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #ffb703;
@@ -412,6 +421,148 @@ a {
   background-color: #ff9e00;
   transform: translateX(-50%) scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Общие стили для блока с фоном */
+.reviews--image {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background-image: url('img/i.png'); /* Путь к изображению */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center; /* Центрирует содержимое по горизонтали */
+  align-items: center; /* Центрирует содержимое по вертикали */
+  text-align: center;
+  z-index: 0;
+}
+
+/* Темный слой поверх картинки */
+.reviews--image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Полупрозрачный темный слой */
+  z-index: 0; /* Слой ниже содержимого */
+}
+
+.reviews--image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transform: translateX(-0.2%);
+}
+
+/* Стили для контейнера с отзывами */
+.review-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding: 40px 15px; /* Чтобы текст не прилипал к краям */
+}
+
+/* Заголовок */
+h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #D07A4D;
+  position: relative;
+  z-index: 3;
+}
+
+/* Слайдер */
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+}
+
+/* Слайды с отзывами */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Карточка отзыва */
+.review-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Большее размытие для 3D эффекта */
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px; /* Ограничиваем ширину карточки */
+  text-align: center; /* Центрируем текст */
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный эффект */
+}
+
+/* Эффект при наведении на карточку */
+.review-card:hover {
+  transform: translateY(-10px); /* Поднимаем карточку вверх */
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2); /* Увеличиваем тень */
+}
+
+/* Текст отзыва */
+.review-card p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333; /* Цвет текста */
+}
+
+/* Логотип в карточке */
+.review-card img {
+  height: 75px;
+  width: 150px;
+  margin-top: 0px;
+  align-self: flex-end;
+}
+
+/* Стрелки слайдера */
+.swiper-button-next, .swiper-button-prev {
+  color: #43a047;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 12px; /* Увеличим стрелки для удобства */
+  font-size: 20px;
+}
+
+/* Пагинация */
+.swiper-pagination {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Кнопка "Все отзывы" */
+.review-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 24px;
+  background-color: #43a047;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.review-button:hover {
+  background-color: #388e3c; /* Темнее на hover */
 }
 
 .modal-overlay {
@@ -478,7 +629,6 @@ a {
 
 .faq-section {
   padding: 40px 15px;
-  background-color: #f9f9f9;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
@@ -558,7 +708,7 @@ a {
 
 .contact-section {
   padding: 40px 20px;
-  background-color: #f8f8f8;
+  background-color: #f8ecf8;
   text-align: center;
 }
 
@@ -583,6 +733,194 @@ a {
   border: 2px solid #ccc;
   border-radius: 12px;
   overflow: hidden;
+}
+
+.clouds-container {
+  position: relative;
+  width: 100%;
+  height: 150px; /* Высота контейнера облаков */
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  width: 200px; /* Ширина облака */
+  height: auto; /* Высота автоматически определяется пропорциями изображения */
+  animation: moveClouds 10s linear infinite;
+}
+
+.cloud1 {
+  left: -250px;
+  top: 5px;
+  animation-duration: 10s;
+}
+
+.cloud2 {
+  left: -300px;
+  top: 10px;
+  animation-duration: 11s;
+}
+
+.cloud3 {
+  left: -350px;
+  top: 15px;
+  animation-duration: 12s;
+}
+
+.cloud4 {
+  left: -400px;
+  top: 20px;
+  animation-duration: 13s;
+}
+
+.cloud5 {
+  left: -450px;
+  top: 25px;
+  animation-duration: 14s;
+}
+
+.cloud6 {
+  left: -500px;
+  top: 30px;
+  animation-duration: 15s;
+}
+
+.cloud7 {
+  left: -550px;
+  top: 35px;
+  animation-duration: 16s;
+}
+
+.cloud8 {
+  left: -600px;
+  top: 40px;
+  animation-duration: 17s;
+}
+
+.cloud9 {
+  left: -650px;
+  top: 45px;
+  animation-duration: 18s;
+}
+
+.cloud10 {
+  left: -700px;
+  top: 50px;
+  animation-duration: 19s;
+}
+
+/* Анимация для движения облаков */
+@keyframes moveClouds {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100vw); /* Двигаем облако вправо за пределы экрана */
+  }
+}
+
+.train-container {
+  position: relative;
+  width: 100%;
+  height: 150px; /* Высота контейнера облаков */
+  overflow: hidden;
+}
+
+.train {
+  position: absolute;
+  width: 400px; /* Ширина облака */
+  height: auto; /* Высота автоматически определяется пропорциями изображения */
+  animation: moveTrain 10s linear infinite;
+}
+
+.train1 {
+  left: -250px;
+  top: 5px;
+  animation-duration: 10s;
+}
+
+/* Анимация для движения облаков */
+@keyframes moveTrain{
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100vw); /* Двигаем облако вправо за пределы экрана */
+  }
+}
+
+.balloon-container {
+  position: relative;
+  width: 100%;
+  height: 150px; /* Высота контейнера облаков */
+  overflow: hidden;
+}
+
+.balloon {
+  position: absolute;
+  width: 200px; /* Ширина облака */
+  height: auto; /* Высота автоматически определяется пропорциями изображения */
+  top: 100%;
+  animation: moveUp 8s linear infinite;
+}
+
+.balloon1 {
+  animation-duration: 4s;
+}
+
+.balloon2 {
+  left: 250px;
+  animation-duration: 3.5s;
+}
+
+.balloon3 {
+  left: 500px;
+  animation-duration: 4.5s;
+}
+
+.balloon4 {
+  left: 750px;
+  animation-duration: 4s;
+}
+
+.balloon5 {
+  left: 1000px;
+  animation-duration: 3.5s;
+}
+
+.balloon6 {
+  left: 1250px;
+  animation-duration: 4.5s;
+}
+
+.balloon7 {
+  left: 1500px;
+  animation-duration: 4s;
+}
+
+.balloon8 {
+  left: 1750px;
+  animation-duration: 3.5s;
+}
+
+.balloon9 {
+  left: 2000px;
+  animation-duration: 4.55s;
+}
+
+.balloon10 {
+  left: 2250px;
+  animation-duration: 4s;
+}
+
+/* Анимация для движения облаков */
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-150%); /* Двигаем облако вправо за пределы экрана */
+  }
 }
 
 /* Адаптивность для мобильных устройств */

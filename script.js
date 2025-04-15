@@ -109,3 +109,23 @@ document.querySelectorAll('.faq-question').forEach(item => {
     parentItem.classList.toggle('active');
   });
 });
+
+window.addEventListener('scroll', function () {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("header nav ul li a");
+
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120; // учёт высоты шапки
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.parentElement.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.parentElement.classList.add("active");
+    }
+  });
+});

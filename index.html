@@ -20,9 +20,9 @@
             <ul>
                 <li class="active"><a href="#about-us">О нас</a></li>
                 <li><a href="#services" class="nav-link">Услуги</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Ответы на вопросы</a></li>
-                <li><a href="#">Где мы находимся</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#faq">Ответы на вопросы</a></li>
+                <li><a href="#contact">Где мы находимся</a></li>
             </ul>
         </nav>
         <button class="btn">Записаться</button>
@@ -84,6 +84,19 @@
             <img src="img/Photo5.png" alt="Фото 5" class="photo">
             <img src="img/Photo6.png" alt="Фото 6" class="photo">
         </div>
+
+        <div class="clouds-container">
+          <img src="img/Облако 1.png" class="cloud cloud1" alt="Cloud 1" />
+          <img src="img/Облако 2.png" class="cloud cloud2" alt="Cloud 2" />
+          <img src="img/Облако 3.png" class="cloud cloud3" alt="Cloud 3" />
+          <img src="img/Облако 4.png" class="cloud cloud4" alt="Cloud 4" />
+          <img src="img/Облако 5.png" class="cloud cloud5" alt="Cloud 5" />
+          <img src="img/Облако 6.png" class="cloud cloud6" alt="Cloud 6" />
+          <img src="img/Облако 7.png" class="cloud cloud7" alt="Cloud 7" />
+          <img src="img/Облако 8.png" class="cloud cloud8" alt="Cloud 8" />
+          <img src="img/Облако 9.png" class="cloud cloud9" alt="Cloud 9" />
+          <img src="img/Облако 10.png" class="cloud cloud10" alt="Cloud 10" />
+        </div>
     </section>
 
     <section id="services" class="services">
@@ -121,10 +134,14 @@
           </div>
           <div class="service-card">
             <div class="image-wrapper">
-              <img src="img/Рисование.jpg" alt="Рисование">
+              <img src="img/Рисование.png" alt="Рисование">
               <button class="btn">Записаться</button>
             </div>
           </div>
+        </div>
+
+        <div class="train-container">
+          <img src="img/поровозик.png" class="train" alt="train 1" />
         </div>
       </section>
 
@@ -134,8 +151,9 @@
           <h3>Записаться</h3>
           <form class="modal-form">
             <input type="text" placeholder="Ваше имя" required>
+            <input type="text" placeholder="Имя вашего ребёнка" required>
             <input type="tel" placeholder="Телефон" required>
-            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Название услуги" required>
             <button type="submit">Отправить</button>
           </form>
         </div>
@@ -146,9 +164,10 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- Блок отзывов -->
-<section style="background-color: #fff59d; padding: 50px 0;">
-  <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center;">
-    <h2 style="font-size: 32px; margin-bottom: 30px;">Что говорят родители</h2>
+<section id="reviews">
+  <div class="reviews--image">
+  <div class="review-container" style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 32px; margin-bottom: 30px;">ЧТО ГОВОРЯТ РОДИТЕЛИ</h2>
 
     <!-- Слайдер -->
     <div class="swiper">
@@ -158,7 +177,7 @@
         <div class="swiper-slide">
           <div class="review-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
             <p>Отличный центр развития, подготовка к школе хорошая, Марина Владимировна очень открытый и отзывчивый человек, с первого занятия нашла общий с дочкой, нам понравилось заниматься здесь 👍 всем рекомендую центр🙏</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС" style="height: 30px; margin-top: 20px; align-self: flex-end;">
+            <img src="img/2гис.png" alt="2ГИС" style="height: 30px; margin-top: 20px; align-self: flex-end;">
           </div>
         </div>
 
@@ -166,35 +185,35 @@
         <div class="swiper-slide">
           <div class="review-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;"> 
             <p>Хороший центр, ребёнку все нравилось, приходил домой довольный. Большое спасибо педагогам за прекрасную работу!</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС">
+            <img src="img/2гис.png" alt="2ГИС">
           </div>
         </div>
 
         <div class="swiper-slide">
           <div class="review-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
             <p>Спасибо за летний лагерь! Моя дочь (7 лет) ходила 2 недели и осталась очень довольна, были и прогулки, активности, уделяли время занятиям на каникулы, рисование, шахматы, кулинария. Были дополнительно организованы выезды (гончарная мастерская, кино). Все понравилось.</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС">
+            <img src="img/2гис.png" alt="2ГИС">
           </div>
         </div>
 
         <div class="swiper-slide">
           <div class="review-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
             <p>Водила ребёнка на дополнительные занятия (подтянуть математику и русский). Мне все очень понравилось, хороший преподавательский состав, который сразу нашёл нужный подход к ребёнку. Особенно благодарим преподавательницу Светлану Викторовну. Всё супер, придём в сентябре ещё!</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС">
+            <img src="img/2гис.png" alt="2ГИС">
           </div>
         </div>
 
         <div class="swiper-slide">
           <div class="review-card" style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
             <p>Очень хороший центр. Сын ходит на подготовку к школе с большим удовольствием. Все нравится! Марина прекрасный педагог. Всегда может найти к детям подход и заинтересовать их!</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС">
+            <img src="img/2гис.png" alt="2ГИС">
           </div>
         </div>
 
         <div class="swiper-slide">
           <div class="review-card"style="background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-height: 200px; display: flex; flex-direction: column; justify-content: space-between;">
             <p>Доброго времени суток! Нам очень нравится этот центр, и наш Педагог Марина! Самое главное — наша доча довольна занятиями! Подход к детям профессиональный, располагает к себе с первого раза, а ходим мы довольно длительное время!</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/2GIS_Logo.svg" alt="2ГИС">
+            <img src="img/2гис.png" alt="2ГИС">
           </div>
         </div>
 
@@ -209,9 +228,22 @@
     </div>
 
     <!-- Кнопка "Все отзывы" -->
-    <a href="https://2gis.ru" target="_blank" style="display: inline-block; margin-top: 40px; padding: 12px 24px; background-color: #43a047; color: white; border-radius: 10px; text-decoration: none;">Все отзывы</a>
+    <a class="review-button"  href="https://2gis.kz/almaty/search/Страна%20чудес/firm/70000001069879238/76.904537%2C43.253944/tab/reviews?m=77.011403%2C43.267287%2F12.17" target="_blank" style="display: inline-block; margin-top: 40px; padding: 12px 24px; background-color: #43a047; color: white; border-radius: 10px; text-decoration: none;">Все отзывы</a>
   </div>
 </section>
+
+<div class="balloon-container">
+  <img src="img/Шарики1.png" class="balloon balloon1" alt="Balloon1" />
+  <img src="img/Шарики6.png" class="balloon balloon2" alt="Balloon2" />
+  <img src="img/Шарики2.png" class="balloon balloon3" alt="Balloon3" />
+  <img src="img/Шарики5.png" class="balloon balloon4" alt="Balloon4" />
+  <img src="img/Шарики3.png" class="balloon balloon5" alt="Balloon5" />
+  <img src="img/Шарики4.png" class="balloon balloon6" alt="Balloon6" />
+  <img src="img/Шарики1.png" class="balloon balloon7" alt="Balloon7" />
+  <img src="img/Шарики6.png" class="balloon balloon8" alt="Balloon8" />
+  <img src="img/Шарики2.png" class="balloon balloon9" alt="Balloon9" />
+  <img src="img/Шарики5.png" class="balloon balloon10" alt="Balloon10" />
+</div>
 
 <section class="faq-section" id="faq">
   <h2>Часто задаваемые вопросы</h2>
