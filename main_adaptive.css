@@ -1291,10 +1291,213 @@ h2 {
   }
 }
 
-/* Ультраширокие экраны (больше 1920px) */
-/*@media (min-width: 1921px) {
-  .container {
-    max-width: 1600px;
+/* Бургер-меню */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 999;
+}
+.burger-menu span {
+  width: 30px;
+  height: 3px;
+  background-color: #003366;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.burger-menu.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger-menu.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Выпадающее мобильное меню */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.1);
+  padding: 60px 20px;
+  transition: left 0.3s ease;
+  z-index: 998;
+}
+.mobile-nav.active {
+  left: 0;
+}
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+}
+.mobile-nav ul li {
+  margin-bottom: 20px;
+}
+.mobile-nav ul li a {
+  font-size: 18px;
+  color: #003366;
+  text-decoration: none;
+}
+
+/* Показываем бургер только на мобильных */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  header .btn {
+    position: absolute;
+    right: 20px;
+  }
+}
+
+/* Телефоны */
+@media (max-width: 768px) {
+
+  /* Hero */
+  .hero--info {
+    position: static;
+    transform: none;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero--button {
+    justify-content: center;
+  }
+
+  /* Модалка */
+  .modal {
+    max-width: 90%;
+    padding: 20px 15px;
+  }
+
+  .modal h3 {
+    font-size: 20px;
+  }
+
+  .modal-form input,
+  .modal-form select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .modal-form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Контакты */
+  .contact-info {
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .contact-info h2 {
+    font-size: 24px;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  #map {
+    height: 300px;
+  }
+
+  /* Уменьшение контента в целом */
+  .section-title {
+    font-size: 30px;
+  }
+
+  .info-blocks {
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .additional-info {
+    padding-right: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .additional-info ul li {
+    font-size: 18px;
+  }
+
+  .circle {
+    width: 140px;
+    height: 140px;
+    font-size: 32px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery img {
+    width: 90%;
+    height: auto;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    width: 90%;
     margin: 0 auto;
   }
-}*/
+
+  .review-card p {
+    font-size: 16px;
+  }
+
+  .faq-section h2 {
+    font-size: 28px;
+  }
+
+  .faq-section p {
+    font-size: 16px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+
+  .faq-answer {
+    font-size: 16px;
+  }
+
+  .review-button {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
