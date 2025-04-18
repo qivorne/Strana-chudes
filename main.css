@@ -961,6 +961,8 @@ h2 {
     background-color: #ffeb3b;
     padding: 20px 0;
     z-index: 999;
+    color: #333333;
+    font-size: 22px;
   }
 
   .mobile-nav.active {
