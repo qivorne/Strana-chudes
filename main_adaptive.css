@@ -913,6 +913,13 @@ h2 {
   }
 }
 
+.burger-menu {
+  display: none;
+}
+.mobile-nav {
+  display: none;
+}
+
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
   body {
