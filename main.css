@@ -61,6 +61,7 @@ header {
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px 40px;
+    overflow: visible;
 }
 
 header .logo {
@@ -978,8 +979,8 @@ h2 {
   header .logo {
     position: static;
     margin: 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
     background-size: contain;
     background-position: center;
   }
@@ -1004,44 +1005,6 @@ h2 {
   }
 }
 
-/* ====== ДЛЯ ЭКРАНОВ ДО 768px (ТЕЛЕФОНЫ) ====== */
-@media (max-width: 768px) {
-  .hero--info h1 {
-    font-size: 28px;
-  }
-
-  .hero--info p {
-    font-size: 18px;
-  }
-
-  .hero--info {
-    right: 5%;
-    max-width: 90%;
-  }
-
-  .info-blocks {
-    flex-direction: column;
-    gap: 20px;
-    padding-left: 0;
-    align-items: center;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .service-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-info {
-    position: static;
-    transform: none;
-    width: 100%;
-    margin: 20px auto;
-  }
-}
-
 /* ========== УЛУЧШЕНИЕ ШАПКИ НА ТЕЛЕФОНАХ И ПЛАНШЕТАХ ========== */
 @media (max-width: 1024px) {
   header {
@@ -1054,8 +1017,8 @@ h2 {
 
   .logo {
     position: static;
-    width: 160px;
-    height: 160px;
+    width: 500px;
+    height: 500px;
     background-size: contain;
     background-position: center;
   }
@@ -1069,24 +1032,10 @@ h2 {
     margin: 0 auto;
   }
 
-  .btn {
-    order: 3;
-    margin-right: 0;
-  }
+  
 
   .mobile-nav {
     top: 80px;
-  }
-}
-
-/* ========== ВОССТАНОВЛЕНИЕ ЗАГОЛОВКА HERO ========== */
-@media (max-width: 768px) {
-  .hero--info h1 {
-    display: block;
-    font-size: 26px;
-    margin-bottom: 15px;
-    color: #fff8dc;
-    text-align: left;
   }
 }
 
@@ -1126,8 +1075,8 @@ h2 {
 /* ======== ПЛАНШЕТ: логотип побольше и ближе к кнопке ======== */
 @media (max-width: 1024px) and (min-width: 769px) {
   .logo {
-    width: 160px;
-    height: 160px;
+    width: 500px;
+    height: 500px;
     margin-left: 10px;
   }
 
@@ -1142,61 +1091,6 @@ h2 {
 
   .service-cards {
     justify-content: center;
-  }
-}
-
-/* ======== ТЕЛЕФОН: логотип, центрирование и масштаб ======== */
-@media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-
-  .logo {
-    width: 160px;
-    height: 160px;
-  }
-
-  .gallery img,
-  .service-card {
-    width: 90%;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
-    justify-content: center;
-  }
-
-  .service-cards {
-    grid-template-columns: 1fr;
-    justify-content: center;
-  }
-
-  .info-item p {
-    font-size: 20px;
-  }
-
-  .circle {
-    width: 120px;
-    height: 120px;
-    font-size: 28px;
-  }
-
-  .additional-info {
-    font-size: 18px;
-  }
-
-  .review-card p {
-    font-size: 18px;
-  }
-
-  .faq-question {
-    font-size: 18px;
-  }
-
-  .faq-answer {
-    font-size: 16px;
   }
 }
 
@@ -1224,5 +1118,112 @@ h2 {
     padding-right: 0;
     text-align: center;
     margin-top: 20px;
+  }
+}
+
+/* ====== ДЛЯ ЭКРАНОВ ДО 768px (ТЕЛЕФОНЫ) ====== */
+@media (max-width: 768px) {
+  header .logo {
+     width: 500px;
+     height: 500px;
+     top: -50px;
+     transform: translateX(-20%);
+   }
+ 
+ html {
+     font-size: 14px;
+   }
+ 
+   .gallery img,
+   .service-card {
+     width: 90%;
+     height: auto;
+     margin: 0 auto;
+   }
+ 
+   .gallery {
+     grid-template-columns: 1fr;
+     justify-content: center;
+   }
+ 
+   .service-cards {
+     grid-template-columns: 1fr;
+     justify-content: center;
+   }
+ 
+   .info-item p {
+     font-size: 20px;
+   }
+ 
+   .circle {
+     width: 120px;
+     height: 120px;
+     font-size: 28px;
+   }
+ 
+   .additional-info {
+     font-size: 18px;
+   }
+ 
+   .review-card p {
+     font-size: 18px;
+   }
+ 
+   .faq-question {
+     font-size: 18px;
+   }
+ 
+   .faq-answer {
+     font-size: 16px;
+   }
+ 
+ .hero--info h1 {
+     display: block;
+     font-size: 26px;
+     margin-bottom: 15px;
+     color: #fff8dc;
+     text-align: left;
+   }
+ 
+  .hero--info h1 {
+     font-size: 28px;
+   }
+ 
+   .hero--info p {
+     font-size: 18px;
+   }
+ 
+   .hero--info {
+     right: 5%;
+     max-width: 90%;
+   }
+ 
+   .info-blocks {
+     flex-direction: column;
+     gap: 20px;
+     padding-left: 0;
+     align-items: center;
+   }
+ 
+   .gallery {
+     grid-template-columns: 1fr;
+   }
+ 
+   .service-cards {
+     grid-template-columns: 1fr;
+   }
+ 
+   .contact-info {
+     position: static;
+     transform: none;
+     width: 100%;
+     margin: 20px auto;
+   }
+ }
+
+ @media (max-width: 768px) {
+  .btn {
+    order: 3;
+    margin-left: 30px;
   }
 }
