@@ -912,3 +912,132 @@ h2 {
     transform: translateX(100vw); /* Двигаем облако вправо за пределы экрана */
   }
 }
+
+.burger-menu {
+  display: none;
+}
+.mobile-nav {
+  display: none;
+}
+
+/* === ОБЩИЕ СТИЛИ ПО УМОЛЧАНИЮ === */
+.desktop-nav {
+  display: flex;
+}
+.burger-menu,
+.mobile-nav {
+  display: none;
+}
+
+/* ====== ДЛЯ ЭКРАНОВ ДО 1024px (ПЛАНШЕТ И НИЖЕ) ====== */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001;
+  }
+
+  .burger-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+  }
+
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    background-color: #ffeb3b;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .mobile-nav.active {
+    display: block;
+  }
+
+  .mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+  }
+
+  /* Логотип */
+  header .logo {
+    position: static;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-position: center;
+  }
+
+  /* Кнопка записаться */
+  header .btn {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  /* Шапка */
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* ====== ДЛЯ ЭКРАНОВ ДО 768px (ТЕЛЕФОНЫ) ====== */
+@media (max-width: 768px) {
+  .hero--info h1 {
+    font-size: 28px;
+  }
+
+  .hero--info p {
+    font-size: 18px;
+  }
+
+  .hero--info {
+    right: 5%;
+    max-width: 90%;
+  }
+
+  .info-blocks {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin: 20px auto;
+  }
+}

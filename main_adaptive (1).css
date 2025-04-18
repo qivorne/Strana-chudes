@@ -1,0 +1,141 @@
+
+
+/* ------------------ АДАПТИВ ------------------ */
+
+/* Телефоны */
+@media (max-width: 768px) {
+
+  /* Hero */
+  .hero--info {
+    position: static;
+    transform: none;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero--button {
+    justify-content: center;
+  }
+
+  /* Модалка */
+  .modal {
+    max-width: 90%;
+    padding: 20px 15px;
+  }
+
+  .modal h3 {
+    font-size: 20px;
+  }
+
+  .modal-form input,
+  .modal-form select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .modal-form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Контакты */
+  .contact-info {
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .contact-info h2 {
+    font-size: 24px;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  #map {
+    height: 300px;
+  }
+
+  /* Уменьшение контента в целом */
+  .section-title {
+    font-size: 30px;
+  }
+
+  .info-blocks {
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .additional-info {
+    padding-right: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .additional-info ul li {
+    font-size: 18px;
+  }
+
+  .circle {
+    width: 140px;
+    height: 140px;
+    font-size: 32px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery img {
+    width: 90%;
+    height: auto;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .review-card p {
+    font-size: 16px;
+  }
+
+  .faq-section h2 {
+    font-size: 28px;
+  }
+
+  .faq-section p {
+    font-size: 16px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+
+  .faq-answer {
+    font-size: 16px;
+  }
+
+  .review-button {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}

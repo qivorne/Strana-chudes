@@ -916,231 +916,80 @@ h2 {
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
   body {
-      padding-top: 50px; /* Уменьшаем верхний отступ на мобильных */
+    padding-top: 50px;
   }
-
+  
   .container {
-      padding: 0 20px; /* Уменьшаем отступы контейнера */
-  }
-
-  /*header {
-      padding: 15px 20px; /* Уменьшаем отступы в хедере 
-  }
-
-  header .logo {
-      top: -50px; /* Позиция логотипа сдвигается 
-      left: 50%; /* Логотип будет по центру 
-      transform: translateX(-50%); /* Центрируем логотип по горизонтали 
-      width: 150px; /* Уменьшаем размер логотипа 
-      height: 150px; /* Уменьшаем размер логотипа 
-  }
-
-  header nav ul {
-      flex-direction: column; /* Меняем направление списка на колонку 
-      margin-left: 0; /* Убираем левый отступ 
-      gap: 10px; /* Уменьшаем расстояние между пунктами меню 
-  }
-
-  header nav ul li {
-      text-align: center; /* Выравниваем ссылки по центру 
-  }
-
-  header .btn {
-      margin-right: 0; /* Убираем правый отступ 
-      align-self: center; /* Выравниваем кнопку по центру 
-      font-size: 18px; /* Уменьшаем размер шрифта 
-      padding: 12px 24px; /* Уменьшаем padding кнопки 
-  } */
-} 
-
-/* Портретная ориентация планшетов (768px до 1024px) */
-@media (max-width: 1024px) {
-  .container {
-      padding: 0 40px; /* Уменьшаем отступы для планшетов */
-  }
-
-  header .logo {
-      width: 250px; /* Логотип немного уменьшен */
-      height: 250px;
-  }
-
-  header nav ul {
-      gap: 15px; /* Увеличиваем отступы между пунктами меню */
-  }
-
-  header nav ul li a {
-      font-size: 18px; /* Уменьшаем размер шрифта для планшетов */
-  }
-
-  header .btn {
-      font-size: 20px; /* Увеличиваем размер шрифта для кнопки */
-      padding: 14px 28px; /* Немного увеличиваем отступы */
-  }
-}
-
-/* Десктопы (от 1024px и выше) */
-@media (min-width: 1024px) {
-  .container {
-      padding: 0 120px; /* Оставляем большие отступы для десктопов */
-  }
-
-  header {
-      padding: 20px 40px; /* Оставляем текущие отступы */
-  }
-
-  header nav ul {
-      gap: 15px; /* Отступы для навигации */
-  }
-
-  header nav ul li a {
-      font-size: 20px; /* Стандартный размер шрифта */
-  }
-
-  header .btn {
-      font-size: 22px; /* Кнопка будет достаточно крупной */
-      padding: 14px 30px; /* Стандартные отступы кнопки */
-  }
-}
-
-/* Мобильные устройства (до 768px) */
-@media (max-width: 768px) {
-  .hero--image {
-      height: 400px; /* Уменьшаем высоту изображения на мобильных */
-  }
-
-  .hero--info {
-      top: 30%; /* Уменьшаем отступ сверху */
-      right: 10%; /* Уменьшаем отступ справа */
-      transform: translateY(-30%); /* Меняем позицию текста */
-      max-width: 90%; /* Уменьшаем максимальную ширину */
-      padding: 0 10px; /* Уменьшаем отступы */
-  }
-
-  .hero--info h1 {
-      font-size: 28px; /* Уменьшаем размер заголовка */
-      margin-bottom: 15px; /* Уменьшаем отступ снизу */
-  }
-
-  .hero--info p {
-      font-size: 18px; /* Уменьшаем размер текста */
-      margin-bottom: 20px; /* Уменьшаем отступ снизу */
-  }
-
-  .hero--button {
-      flex-direction: column; /* Кнопка будет располагаться в колонку */
-  }
-
-  .hero .btn {
-      font-size: 18px; /* Уменьшаем размер шрифта кнопки */
-      padding: 12px 24px; /* Уменьшаем отступы кнопки */
-  }
-}
-
-/* Планшеты (от 768px до 1024px) */
-@media (max-width: 1024px) {
-  .hero--image {
-      height: 500px; /* Высота изображения немного уменьшена */
-  }
-
-  .hero--info {
-      top: 50%; /* Увеличиваем отступ сверху */
-      right: 10%; /* Сдвигаем немного текст вправо */
-      transform: translateY(-50%); /* Центрируем по вертикали */
-      max-width: 80%; /* Уменьшаем максимальную ширину */
-  }
-
-  .hero--info h1 {
-      font-size: 32px; /* Уменьшаем размер заголовка */
-  }
-
-  .hero--info p {
-      font-size: 20px; /* Уменьшаем размер текста */
-  }
-
-  .hero .btn {
-      font-size: 20px; /* Увеличиваем размер шрифта кнопки */
-      padding: 14px 28px; /* Уменьшаем отступы кнопки */
-  }
-}
-
-/* Десктопы (от 1024px и выше) */
-@media (min-width: 1024px) {
-  .hero--image {
-      height: 700px; /* Стандартная высота изображения для десктопов */
-  }
-
-  .hero--info {
-      top: 50%; /* Центрируем информацию по вертикали */
-      right: 15%; /* Стандартное положение справа */
-      transform: translateY(-50%); /* Центрируем по вертикали */
-      max-width: 700px; /* Устанавливаем максимальную ширину */
-  }
-
-  .hero--info h1 {
-      font-size: 40px; /* Стандартный размер заголовка */
-  }
-
-  .hero--info p {
-      font-size: 25px; /* Стандартный размер текста */
-  }
-
-  .hero .btn {
-      font-size: 22px; /* Стандартный размер кнопки */
-      padding: 14px 30px; /* Стандартные отступы кнопки */
-  }
-}
-
-/* Планшеты (до 1024px) */
-@media (max-width: 1024px) {
-  .info-blocks {
-    padding-left: 0; /* Убираем фиксированный отступ */
-    justify-content: center; /* Центрируем блоки */
-    gap: 30px; /* Немного уменьшаем промежутки */
-  }
-
-  .additional-info {
-    padding-right: 0; /* Убираем фиксированный отступ */
-    text-align: center;
     padding: 0 20px;
   }
 
-  .additional-info p {
-    font-size: 30px;
+  header {
+    padding: 15px 20px;
   }
 
-  .additional-info ul li {
-    font-size: 20px;
+  header .logo {
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
   }
 
-  .circle {
-    width: 160px;
-    height: 160px;
-    font-size: 40px;
+  header nav ul {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 10px;
   }
 
-  .info-item p {
-    font-size: 24px;
+  header .btn {
+    margin-right: 0;
+    align-self: center;
+    font-size: 18px;
+    padding: 12px 24px;
   }
 
-  .section-title {
-    font-size: 40px;
+  .hero--image {
+    height: 400px;
   }
-}
 
-/* Мобильные устройства (до 768px) */
-@media (max-width: 768px) {
-  .about-us {
-    flex-direction: column; /* Ставим блоки вертикально */
-    align-items: center;
-    gap: 40px;
-    padding: 40px 20px;
+  .hero--info {
+    top: 30%;
+    right: 10%;
+    transform: translateY(-30%);
+    max-width: 90%;
+    padding: 0 10px;
+  }
+
+  .hero--info h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .hero--info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .hero--button {
+    flex-direction: column;
+  }
+
+  .hero .btn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  .info-blocks,
+  .additional-info {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+    text-align: center;
   }
 
   .info-blocks {
-    flex-direction: column; /* Круги и подписи один под другим */
+    flex-direction: column;
     align-items: center;
-    padding: 0;
-    gap: 20px;
   }
 
   .circle {
@@ -1152,11 +1001,6 @@ h2 {
 
   .info-item p {
     font-size: 20px;
-  }
-
-  .additional-info {
-    padding: 0 15px;
-    text-align: center;
   }
 
   .additional-info p {
@@ -1179,179 +1023,68 @@ h2 {
   .section-title {
     font-size: 32px;
   }
-}
 
-/* ---------- Адаптив под разные экраны ---------- */
-
-/* Мобильные устройства (до 768px) */
-@media (max-width: 768px) {
-  header nav ul {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-    gap: 8px;
-  }
-
-  header .btn {
-    margin-right: 0;
-    font-size: 18px;
-    padding: 12px 24px;
-  }
-
-  .hero--info {
-    position: static;
-    transform: none;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .hero--info h1 {
-    font-size: 28px;
-  }
-
-  .hero--info p {
-    font-size: 18px;
-  }
-
-  .info-blocks,
-  .additional-info {
-    padding-left: 0;
-    padding-right: 0;
-    justify-content: center;
-  }
-
-  .info-blocks {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .service-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .cloud,
-  .train {
-    display: none; /* отключим анимации для мобильных */
-  }
-}
-
-/* Планшеты (от 769px до 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  header nav ul {
-    margin-left: 0;
-    gap: 12px;
-  }
-
-  .hero--info {
-    right: 10%;
-    max-width: 90%;
-  }
-
-  .info-blocks {
-    padding-left: 0;
-  }
-
-  .additional-info {
-    padding-right: 0;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
-  }
-
-  .service-cards {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
-  }
-}
-
-/* Десктопы (1025px – 1440px) */
-@media (min-width: 1025px) and (max-width: 1440px) {
-  header nav ul {
-    margin-left: 200px;
-  }
-
-  .info-blocks {
-    padding-left: 100px;
-  }
-
-  .additional-info {
-    padding-right: 100px;
-  }
-
-  .gallery,
-  .service-cards {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 50px;
-  }
-}
-
-/* Бургер-меню */
-.burger-menu {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-  z-index: 999;
-}
-.burger-menu span {
-  width: 30px;
-  height: 3px;
-  background-color: #003366;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-.burger-menu.active span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-.burger-menu.active span:nth-child(2) {
-  opacity: 0;
-}
-.burger-menu.active span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
-
-/* Выпадающее мобильное меню */
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 250px;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: 2px 0 6px rgba(0,0,0,0.1);
-  padding: 60px 20px;
-  transition: left 0.3s ease;
-  z-index: 998;
-}
-.mobile-nav.active {
-  left: 0;
-}
-.mobile-nav ul {
-  list-style: none;
-  padding: 0;
-}
-.mobile-nav ul li {
-  margin-bottom: 20px;
-}
-.mobile-nav ul li a {
-  font-size: 18px;
-  color: #003366;
-  text-decoration: none;
-}
-
-/* Показываем бургер только на мобильных */
-@media (max-width: 768px) {
   .burger-menu {
     display: flex;
     position: absolute;
     top: 30px;
     left: 20px;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .burger-menu span {
+    width: 30px;
+    height: 3px;
+    background-color: #003366;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .burger-menu.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .burger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    padding: 60px 20px;
+    transition: left 0.3s ease;
+    z-index: 998;
+  }
+
+  .mobile-nav.active {
+    left: 0;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-nav ul li {
+    margin-bottom: 20px;
+  }
+
+  .mobile-nav ul li a {
+    font-size: 18px;
+    color: #003366;
+    text-decoration: none;
   }
 
   nav ul {
@@ -1361,6 +1094,92 @@ h2 {
   header .btn {
     position: absolute;
     right: 20px;
+  }
+}
+
+/* Планшеты (от 769px до 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero--image {
+    height: 500px;
+  }
+
+  .hero--info {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    max-width: 80%;
+  }
+
+  .hero--info h1 {
+    font-size: 32px;
+  }
+
+  .hero--info p {
+    font-size: 20px;
+  }
+
+  .hero .btn {
+    font-size: 20px;
+    padding: 14px 28px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+}
+
+/* Десктопы (от 1024px и выше) */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 120px;
+  }
+
+  header {
+    padding: 20px 40px;
+  }
+
+  header nav ul {
+    gap: 15px;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  header .btn {
+    font-size: 22px;
+    padding: 14px 30px;
+  }
+
+  .hero--image {
+    height: 700px;
+  }
+
+  .hero--info {
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    max-width: 700px;
+  }
+
+  .hero--info h1 {
+    font-size: 40px;
+  }
+
+  .hero--info p {
+    font-size: 25px;
+  }
+
+  .gallery,
+  .service-cards {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
   }
 }
 
@@ -1499,5 +1318,47 @@ h2 {
   .review-button {
     font-size: 18px;
     padding: 10px 20px;
+  }
+}
+
+/* Обычное меню для десктопов и планшетов */
+.desktop-nav {
+  display: block; /* Показываем меню по умолчанию */
+}
+
+/* Мобильное меню и бургер-иконка по умолчанию скрыты */
+.mobile-nav,
+.burger-menu {
+  display: none;
+}
+
+/* Для экранов, ширина которых меньше 768px (мобильные устройства) */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none; /* Скрыть обычное меню на мобильных устройствах */
+  }
+
+  .mobile-nav {
+    display: block; /* Показываем мобильное меню */
+  }
+
+  .burger-menu {
+    display: block; /* Показываем бургер-меню */
+    cursor: pointer; /* Указатель на кнопку бургер-меню */
+  }
+}
+
+/* Для экранов шириной от 769px и выше (планшеты, ноутбуки, ПК) */
+@media (min-width: 769px) {
+  .desktop-nav {
+    display: block; /* Показываем обычное меню на устройствах с шириной экрана от 769px */
+  }
+
+  .mobile-nav {
+    display: none; /* Скрываем мобильное меню на устройствах с шириной экрана от 769px */
+  }
+
+  .burger-menu {
+    display: none; /* Скрываем бургер-меню на устройствах с шириной экрана от 769px */
   }
 }
