@@ -1122,3 +1122,107 @@ h2 {
     text-align: center;
   }
 }
+
+/* ======== ПЛАНШЕТ: логотип побольше и ближе к кнопке ======== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .logo {
+    width: 160px;
+    height: 160px;
+    margin-left: 10px;
+  }
+
+  header {
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+
+  .gallery {
+    justify-content: center;
+  }
+
+  .service-cards {
+    justify-content: center;
+  }
+}
+
+/* ======== ТЕЛЕФОН: логотип, центрирование и масштаб ======== */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .gallery img,
+  .service-card {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .info-item p {
+    font-size: 20px;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+    font-size: 28px;
+  }
+
+  .additional-info {
+    font-size: 18px;
+  }
+
+  .review-card p {
+    font-size: 18px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+
+  .faq-answer {
+    font-size: 16px;
+  }
+}
+
+/* ======== ОБЫЧНЫЕ МОНИТОРЫ: меню и структура ======== */
+@media (min-width: 1024px) and (max-width: 1600px) {
+  header {
+    padding: 20px 60px;
+  }
+
+  header nav ul {
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  header .btn {
+    margin-right: 60px;
+  }
+
+  .info-blocks {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .additional-info {
+    padding-right: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
