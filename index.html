@@ -176,14 +176,14 @@
             <input type="tel" id="phone" placeholder="Телефон" required>
             <select id="service" required>
               <option value="" disabled selected>Интересующее направление</option>
-              <option value="Направление 1">Продленка</option>
+              <option value="Продленка">Продленка</option>
               <option value="Направление 2">Детский лагерь</option>
-              <option value="Направление 3">Подготовка к школе</option>
-              <option value="Направление 4">Развивашка</option>
-              <option value="Направление 5">Репетиторство</option>
-              <option value="Направление 6">Шахматы</option>
-              <option value="Направление 7">Рисование</option>
-              <option value="Направление 8">Лепка</option>
+              <option value="Подготовка к школе">Подготовка к школе</option>
+              <option value="Развивашка">Развивашка</option>
+              <option value="Репетиторство">Репетиторство</option>
+              <option value="Шахматы">Шахматы</option>
+              <option value="Рисование">Рисование</option>
+              <option value="Лепка">Лепка</option>
             </select>
             <button type="submit">Отправить</button>
           </form>
@@ -200,7 +200,7 @@
             const service = document.getElementById('service').value;
     
             // URL, который мы получили при развертывании Google Apps Script
-            const scriptUrl = 'https://script.google.com/macros/s/AKfycbxBP2MEwh27qkoD-HiLA7i1zUCB7fIPuQOFfjLPEagqiGFcHitPZJrFrYcwKJ1djjS3qg/exec';
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbyZh5D_uo642KSstcaTh1ooHPQ_Y-O2oSc3ISyPuHjwUKZoVtC9ZddVQKuzihkt-o2EfQ/exec';
     
             // Отправляем данные в Google Apps Script
             fetch(scriptUrl, {
