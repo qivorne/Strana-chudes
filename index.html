@@ -189,39 +189,41 @@
           </form>
         </div>
       </div>
-      
+
       <script>
-        document.getElementById('modalForm').addEventListener('submit', function(event) {
-          event.preventDefault();
-      
-          // Получаем данные из формы
-          var formData = new FormData(this);
-          var data = {
-            name: formData.get('name'),
-            phone: formData.get('phone'),
-            service: formData.get('service')
-          };
-      
-          // Отправляем данные на сервер через POST-запрос
-          fetch('https://script.google.com/macros/s/AKfycbw2steTGbpcIcMpsIYprOwbbxfkGBDUNFOneGxE-abHLTO8a-A7gWDg51bOmLACPoHr/exec', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-          })
-          .then(response => response.text())
-          .then(result => {
-            alert('Заявка отправлена!');
-            // Закрываем модалку после отправки
-            document.getElementById('modal').style.display = 'none';
-          })
-          .catch(error => {
-            console.error('Ошибка:', error);
-            alert('Произошла ошибка при отправке заявки.');
-          });
+        document.getElementById('modalForm').addEventListener('submit', function (event) {
+            event.preventDefault();  // Предотвращаем стандартное отправление формы
+    
+            // Получаем данные из формы
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+    
+            // URL, который мы получили при развертывании Google Apps Script
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbxBP2MEwh27qkoD-HiLA7i1zUCB7fIPuQOFfjLPEagqiGFcHitPZJrFrYcwKJ1djjS3qg/exec';
+    
+            // Отправляем данные в Google Apps Script
+            fetch(scriptUrl, {
+                method: 'POST',
+                body: new URLSearchParams({
+                    'name': name,
+                    'phone': phone,
+                    'service': service
+                })
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Выводим сообщение об успехе или ошибке
+                alert('Заявка отправлена!');
+                // Закрытие модального окна
+                document.getElementById('modal').style.display = 'none';
+            })
+            .catch(error => {
+                alert('Произошла ошибка. Попробуйте снова.');
+            });
         });
-      </script>
+    </script>
+      
 
 <!-- Подключение Swiper.js (CDN) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
