@@ -25,11 +25,8 @@
                 <li><a href="#contact">Где мы находимся</a></li>
             </ul>
         </nav>
-        <button class="btn" id="openModal">
-          <video autoplay loop muted playsinline>
-            <source src="video/Записаться.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-          </video>
+        <button class="header-button" id="openModal">
+          <img src="video/ВСЕ ОТЗЫВЫ (2).gif" alt="Все отзывы" class="header-gif">
         </button>
 
         <div class="burger-menu" id="burgerMenu">
@@ -205,7 +202,7 @@
             const service = document.getElementById('service').value;
     
             // URL, который мы получили при развертывании Google Apps Script
-            const scriptUrl = 'https://script.google.com/macros/s/AKfycbwwVwEWjI3drLq5dGHnipbJ3oSLZx-3DYQFhLoGVJGDrngS8WxoSd4zcBeo_H-xb15mJQ/exec';
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycby0F8TwEgsQra176hWsgKu5UqM8z3cbZpc3X7jREU39um_fkP4P694pQCegJuG3IKiEdg/exec';
     
             // Отправляем данные в Google Apps Script
             fetch(scriptUrl, {

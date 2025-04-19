@@ -95,7 +95,7 @@ header nav ul {
     justify-content: center;
     gap: 15px;
     padding: 10px 0;
-    margin-left: 800px;
+    margin-left: 300px;
 }
 
 header nav ul li a {
@@ -105,6 +105,7 @@ header nav ul li a {
     padding: 8px 14px;
     border-radius: 5px;
     transition: background-color 0.3s;
+    left: 300px;
 }
 
 header nav ul li.active a {
@@ -120,27 +121,29 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-header .btn {
+.header-button {
   padding: 0;
   border: none;
   background: none;
   cursor: pointer;
   border-radius: 24px;
-   /* Обрезаем всё, что выходит за пределы кнопки */
-  width: 400px; /* Ширина кнопки */
-  height: 300px; /* Высота кнопки */
+  width: 100px; /* Ширина кнопки */
+  height: 140px; /* Высота кнопки */
   position: relative;
+  overflow: visible;
+  bottom: 60px;
 }
 
-header .btn video {
+.header-gif {
   position: absolute;
-  top: 20px; /* Начинаем с верхнего края */
-  left: -100px; /* Начинаем с левого края */
-  width: 100%; /* Видео будет растягиваться по ширине кнопки */
-  height: 100%; /* Видео будет растягиваться по высоте кнопки */
+  top: -210px; /* Начинаем с верхнего края */
+  left: -700px; /* Начинаем с левого края */
+  width: 400px; /* Видео будет растягиваться по ширине кнопки */
+  height: auto; /* Видео будет растягиваться по высоте кнопки */
   object-fit: cover; /* Видео покроет весь контейнер, обрезая лишнее, если нужно */
   display: block;
-  clip-path: inset(35% 20% 45% 20%);
+  clip-path: inset(42% 29% 47% 29%);
+  transform: translateY(0px);
 }
 
 
