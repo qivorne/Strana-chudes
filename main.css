@@ -392,18 +392,16 @@ a {
 .image-wrapper {
   position: relative;
   overflow: hidden;
-  border-radius: 45px 45px 0 0;
-  height: 100%;
-  background-color: #FFEB3B;
   border-radius: 45px 45px 45px 45px;
+  height: 100%;
+  background-color: transparent;
 }
 
 .image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top; /* Сдвигаем фокус наверх */
-  transform: translateY(-5%); /* Сдвигаем изображение вверх (на 20%) */
+  
 }
 
 .image-wrapper .btn {
@@ -423,12 +421,6 @@ a {
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: "Dimbo Russian", sans-serif;
-}
-
-.image-wrapper .btn:hover {
-  background-color: transparent;
-  transform: translateX(-50%) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .reviews {

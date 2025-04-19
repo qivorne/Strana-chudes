@@ -132,31 +132,31 @@
           </div>
           <div class="service-card">
             <div class="image-wrapper">
-              <img src="img/Репетиторство.jpg" alt="Репетиторство">
+              <img src="img/Репетиторство3.jpg" alt="Репетиторство">
               <button class="btn">Записаться</button>
             </div>
           </div>
           <div class="service-card">
             <div class="image-wrapper">
-              <img src="img/Подготовка к школе.jpg" alt="Подготовка к школе">
+              <img src="img/Подготовка к школе3.jpg" alt="Подготовка к школе">
               <button class="btn">Записаться</button>
             </div>
           </div>
           <div class="service-card">
             <div class="image-wrapper">
-              <img src="img/Шахматы.jpg" alt="Шахматы">
+              <img src="img/Шахматы3.jpg" alt="Шахматы">
               <button class="btn">Записаться</button>
             </div>
           </div>
           <div class="service-card">
             <div class="image-wrapper">
-              <img src="img/Лепка.jpg" alt="Лепка">
+              <img src="img/Лепка3.jpg" alt="Лепка">
               <button class="btn">Записаться</button>
             </div>
           </div>
           <div class="service-card">
             <div class="image-wrapper">
-              <img src="img/Рисование.png" alt="Рисование">
+              <img src="img/Рисование3.jpg" alt="Рисование">
               <button class="btn">Записаться</button>
             </div>
           </div>
@@ -171,10 +171,10 @@
         <div class="modal">
           <span class="close-btn" id="closeModal">&#10006;</span>
           <h3>Записаться</h3>
-          <form class="modal-form">
-            <input type="text" placeholder="Как к вам обращаться" required>
-            <input type="tel" placeholder="Телефон" required>
-            <select required>
+          <form class="modal-form" id="modalForm">
+            <input type="text" id="name" placeholder="Как к вам обращаться" required>
+            <input type="tel" id="phone" placeholder="Телефон" required>
+            <select id="service" required>
               <option value="" disabled selected>Интересующее направление</option>
               <option value="Направление 1">Продленка</option>
               <option value="Направление 2">Детский лагерь</option>
@@ -184,11 +184,44 @@
               <option value="Направление 6">Шахматы</option>
               <option value="Направление 7">Рисование</option>
               <option value="Направление 8">Лепка</option>
-              </select>
+            </select>
             <button type="submit">Отправить</button>
           </form>
         </div>
       </div>
+      
+      <script>
+        document.getElementById('modalForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+      
+          // Получаем данные из формы
+          var formData = new FormData(this);
+          var data = {
+            name: formData.get('name'),
+            phone: formData.get('phone'),
+            service: formData.get('service')
+          };
+      
+          // Отправляем данные на сервер через POST-запрос
+          fetch('https://script.google.com/macros/s/AKfycbxGrLLvwpo2PsF9XDDsP-H22iErEi2KHRFK2TPenEc1eMAxKIX0IkjsHMxybtBbqXTq/exec', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          })
+          .then(response => response.text())
+          .then(result => {
+            alert('Заявка отправлена!');
+            // Закрываем модалку после отправки
+            document.getElementById('modal').style.display = 'none';
+          })
+          .catch(error => {
+            console.error('Ошибка:', error);
+            alert('Произошла ошибка при отправке заявки.');
+          });
+        });
+      </script>
 
 <!-- Подключение Swiper.js (CDN) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
