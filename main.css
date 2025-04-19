@@ -121,28 +121,28 @@ header nav ul li a:hover {
 }
 
 header .btn {
-    background-color: #ffb703;
-    color: #003366;
-    padding: 14px 30px;
-    border: 1px solid #ff9e00;
-    border-radius: 24px;
-    cursor: pointer;
-    font-size: 22px;
-    font-weight: 0;
-    text-transform: none;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    align-self: center;
-    margin-right: 600px;
-    font-family: "Dimbo Russian", sans-serif;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 24px;
+   /* Обрезаем всё, что выходит за пределы кнопки */
+  width: 400px; /* Ширина кнопки */
+  height: 300px; /* Высота кнопки */
+  position: relative;
 }
 
-header .btn:hover {
-    background-color: #ff9e00;
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+header .btn video {
+  position: absolute;
+  top: 20px; /* Начинаем с верхнего края */
+  left: -100px; /* Начинаем с левого края */
+  width: 100%; /* Видео будет растягиваться по ширине кнопки */
+  height: 100%; /* Видео будет растягиваться по высоте кнопки */
+  object-fit: cover; /* Видео покроет весь контейнер, обрезая лишнее, если нужно */
+  display: block;
+  clip-path: inset(35% 20% 45% 20%);
 }
+
 
 /* Стили для секции hero */
 .hero {
@@ -213,7 +213,7 @@ header .btn:hover {
     margin-top: 30px;
 }
 .hero .btn {
-    background-color: #ffb703;
+    background-color: #ffeb3b;
     color: #003366;
     padding: 14px 30px;
     border: 1px solid #ff9e00;
@@ -439,8 +439,6 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.05);
-  filter: blur(10px); /* Размытие */
   z-index: -1; /* Ставим за содержимое */
 }
 
@@ -538,20 +536,29 @@ h2 {
 }
 
 /* Кнопка "Все отзывы" */
-.review-button {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 12px 24px;
-  background-color: #43a047;
-  color: white;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+a.review-button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 24px;
+  width: 100px; /* Ширина кнопки */
+  height: 140px; /* Высота кнопки */
+  position: relative;
+  overflow: visible;
+  bottom: 60px;
 }
 
-.review-button:hover {
-  background-color: #388e3c; /* Темнее на hover */
+.review-gif {
+  position: absolute;
+  top: -90px; /* Начинаем с верхнего края */
+  left: -350px; /* Начинаем с левого края */
+  width: 800px; /* Видео будет растягиваться по ширине кнопки */
+  height: auto; /* Видео будет растягиваться по высоте кнопки */
+  object-fit: cover; /* Видео покроет весь контейнер, обрезая лишнее, если нужно */
+  display: block;
+  clip-path: inset(30% 40% 50% 40%);
+  transform: translateY(0px);
 }
 
 .modal-overlay {
