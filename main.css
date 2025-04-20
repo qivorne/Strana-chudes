@@ -939,6 +939,10 @@ a.review-button {
     display: none;
   }
 
+  .modal-overlay {
+    left: -95px;
+  }
+
   .burger-menu {
     display: flex;
     flex-direction: column;
@@ -1052,8 +1056,8 @@ a.review-button {
   }
 }
 
-/* ========== ФИКСЫ ДЛЯ ОБЫЧНЫХ МОНИТОРОВ (1024px – 1600px) ========== */
-@media (min-width: 1024px) and (max-width: 1600px) {
+/* ========== ФИКСЫ ДЛЯ ОБЫЧНЫХ МОНИТОРОВ (1024px – 1700px) ========== */
+@media (min-width: 1024px) and (max-width: 1700px) {
   header nav ul {
     margin-left: auto;
     margin-right: auto;
