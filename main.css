@@ -127,23 +127,25 @@ header nav ul li a:hover {
   background: none;
   cursor: pointer;
   border-radius: 24px;
-  width: 100px; /* Ширина кнопки */
-  height: 140px; /* Высота кнопки */
+  width: 200px; /* Ширина кнопки */
+  height: 120px; /* Высота кнопки */
   position: relative;
   overflow: visible;
-  bottom: 60px;
+  top: 10px;
+  left: -550px;
 }
 
 .header-gif {
   position: absolute;
-  top: -210px; /* Начинаем с верхнего края */
-  left: -700px; /* Начинаем с левого края */
+  top: -290px; /* Начинаем с верхнего края */
+  left: -100px; /* Начинаем с левого края */
   width: 400px; /* Видео будет растягиваться по ширине кнопки */
   height: auto; /* Видео будет растягиваться по высоте кнопки */
   object-fit: cover; /* Видео покроет весь контейнер, обрезая лишнее, если нужно */
   display: block;
   clip-path: inset(42% 29% 47% 29%);
   transform: translateY(0px);
+  pointer-events: none;
 }
 
 
@@ -995,12 +997,11 @@ a.review-button {
   }
 
   /* Кнопка записаться */
-  header .btn {
+  .header-button {
     order: 3;
     margin: 0 auto;
     margin-top: 0px;
-    right: -100%;
-    transform: translateX(-100%);
+    transform: translateX(180%);
     flex-shrink: 0;
   }
 
@@ -1016,6 +1017,8 @@ a.review-button {
   .container {
     padding: 0 20px;
   }
+
+  
 }
 
 /* ========== УЛУЧШЕНИЕ ШАПКИ НА ТЕЛЕФОНАХ И ПЛАНШЕТАХ ========== */
@@ -1035,7 +1038,9 @@ a.review-button {
   .mobile-nav {
     top: 80px;
   }
+  
 }
+
 
 /* ========== ЦЕНТРИРОВКА "ОСОБЕННОСТЕЙ" ========== */
 @media (max-width: 1024px) {
@@ -1055,8 +1060,16 @@ a.review-button {
     gap: 25px;
   }
 
-  header .btn {
-    margin-right: 40px;
+  .desktop-nav {
+    left: -100px;
+  }
+
+  header .logo {
+    left: 250px;
+  }
+
+  .header-button {
+    margin-right: -550px;
   }
 
   .info-blocks {
@@ -1101,10 +1114,6 @@ a.review-button {
   header nav ul {
     margin: 0 auto;
     gap: 24px;
-  }
-
-  header .btn {
-    margin-right: 60px;
   }
 
   .info-blocks {
@@ -1211,3 +1220,5 @@ a.review-button {
      margin: 20px auto;
    }
  }
+
+ 
